@@ -17,11 +17,16 @@ public class SoundViewModel extends BaseObservable {
 
     public void setSound(Sound sound) {
         mSound = sound;
-//        notifyChange();
+        notifyChange();
     }
 
-//    @Bindable
+    @Bindable
     public String getTitle() {
         return mSound.getName();
     }
+
+    public void onButtonClicked() {
+        mBeatBox.play(mSound);
+    }
+
 }
